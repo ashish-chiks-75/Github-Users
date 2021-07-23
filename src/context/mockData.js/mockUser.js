@@ -1,0 +1,38 @@
+export default {
+  login: "ashish-chiks-75",
+  id: 86738993,
+  node_id: "MDQ6VXNlcjg2NzM4OTkz",
+  avatar_url: "https://avatars.githubusercontent.com/u/86738993?v=4",
+  gravatar_id: "",
+  url: "https://api.github.com/users/ashish-chiks-75",
+  html_url: "https://github.com/ashish-chiks-75",
+  followers_url: "https://api.github.com/users/ashish-chiks-75/followers",
+  following_url:
+    "https://api.github.com/users/ashish-chiks-75/following{/other_user}",
+  gists_url: "https://api.github.com/users/ashish-chiks-75/gists{/gist_id}",
+  starred_url:
+    "https://api.github.com/users/ashish-chiks-75/starred{/owner}{/repo}",
+  subscriptions_url:
+    "https://api.github.com/users/ashish-chiks-75/subscriptions",
+  organizations_url: "https://api.github.com/users/ashish-chiks-75/orgs",
+  repos_url: "https://api.github.com/users/ashish-chiks-75/repos",
+  events_url: "https://api.github.com/users/ashish-chiks-75/events{/privacy}",
+  received_events_url:
+    "https://api.github.com/users/ashish-chiks-75/received_events",
+  type: "User",
+  site_admin: false,
+  name: null,
+  company: null,
+  blog: "",
+  location: null,
+  email: null,
+  hireable: null,
+  bio: "Student @ IIT Jodhpur. MERN stack developer.",
+  twitter_username: null,
+  public_repos: 5,
+  public_gists: 0,
+  followers: 0,
+  following: 1,
+  created_at: "2021-06-30T17:30:46Z",
+  updated_at: "2021-07-19T11:52:51Z",
+};
