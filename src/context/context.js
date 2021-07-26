@@ -38,8 +38,25 @@ const GithubProvider = ({ children }) => {
     setError({ show: false, msg: "" });
     try {
       const response = await axios(`${rootUrl}/users/${user}`);
-      if (response) setGithubUser(response.data);
-      else setError({ show: true, msg: "There is no user with that username" });
+      if (response) {
+        setGithubUser(response.data);
+        const { repos_url, followers_url } = response.data;
+        const repos = await axios(`${repos_url}?per_page=100`);
+        const followers = await axios(`${followers_url}?per_page=100`);
+
+        await Promise.allSettled([repos, followers]).then((results) => {
+          if (
+            results[0].status === "rejected" ||
+            results[1].status === "rejected"
+          ) {
+            setError({ show: true, msg: "Internal server error" });
+          } else {
+            setRepos(results[0].value.data);
+            setFollowers(results[1].value.data);
+          }
+        });
+      } else
+        setError({ show: true, msg: "There is no user with that username" });
     } catch (error) {
       setError({ show: true, msg: "There is no user with that username" });
     }
